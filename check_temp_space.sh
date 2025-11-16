@@ -1,6 +1,18 @@
 #!/usr/bin/env bash
 # check_temp_space.sh
 
+set -euo pipefail
+
+# Refuse to run if any of the monitored paths look like options.
+sanitize_path() {
+  case "$1" in
+    -*)
+      echo "Refusing to inspect path beginning with '-' to avoid option injection: $1" >&2
+      return 1
+      ;;
+  esac
+}
+
 paths=(
   /tmp
   /var/tmp
@@ -11,17 +23,17 @@ paths=(
   "$HOME/.cache/thumbnails"
 )
 
-echo "== Disk usage =="
+printf '== Disk usage ==\n'
 df -h
-echo
+printf '\n'
 
-echo "== Suspect temp/cache dirs =="
+printf '== Suspect temp/cache dirs ==\n'
 for p in "${paths[@]}"; do
+  sanitize_path "$p" || continue
   [ -e "$p" ] || continue
-  du -sh "$p"
+  du -sh -- "$p"
 done 2>/dev/null | sort -h
 
-echo
-echo "== systemd journal =="
+printf '\n== systemd journal ==\n'
 journalctl --disk-usage
 
