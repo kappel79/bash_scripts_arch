@@ -10,10 +10,15 @@ Usage
 Clone the repository:
 
 
-git clone https://github.com/yourusername/bashscripts-archlinux.git
+git clone https://github.com/kappel79/bash_scripts_arch.git
 
 
 Browse the scripts and read their documentation.
 Run, modify, or integrate them into your workflow.
 Contributing
-Have a script you’d like to add? Found a bug? Open an issue or submit a pull request. Let’s build this toolbox together!
+Have a script you’d like to add? Found a bug? Open an issue or submit a pull request. 
+
+Let’s build this toolbox together!
+
+Acknowledgements
+Huge thanks to Harriet and my AI for fostering my developer skills and encouraging this project.
