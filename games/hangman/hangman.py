@@ -1,5 +1,26 @@
 import random
 import os
+from words import WORDS
+LOGO = r'''
+
+                                ------
+                                |    |
+                                |    O
+                                |   /|\
+                                |   / \
+                                |
+                                --------
+           _  _     ___    _  _     ___   __  __    ___    _  _
+    o O O | || |   /   \  | \| |   / __| |  \/  |  /   \  | \| |
+   o      | __ |   | - |  | .` |  | (_ | | |\/| |  | - |  | .` |
+  TS__[O] |_||_|   |_|_|  |_|\_|   \___| |_|__|_|  |_|_|  |_|\_|
+ {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|
+./o--000'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'
+
+                    Copyright (C) 2025 kappel79                 
+'''
+
+
 
 # ASCII Art for Hangman stages
 STAGES = [
@@ -68,17 +89,12 @@ STAGES = [
     """
 ]
 
-WORDS = [
-    "PYTHON", "DEVELOPER", "TERMINAL", "KEYBOARD", "MONITOR",
-    "ALGORITHM", "FUNCTION", "VARIABLE", "COMPUTER", "PROGRAMMING",
-    "SOFTWARE", "HARDWARE", "NETWORK", "DATABASE", "INTERFACE"
-]
-
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def play_game():
-    word = random.choice(WORDS)
+    word, question = random.choice(list(WORDS.items()))
+    word = word.upper()
     word_completion = "_" * len(word)
     guessed = False
     guessed_letters = []
@@ -86,6 +102,7 @@ def play_game():
     tries = 6
 
     print("Let's play Hangman!")
+    print(f"Hint: {question}")
     print(STAGES[0])
     print("\n" + word_completion)
     print("\n")
@@ -134,6 +151,9 @@ def play_game():
         print("Sorry, you ran out of tries. The word was " + word + ". Maybe next time!")
 
 def main():
+    clear_screen()
+    print(LOGO)
+    input("Press Enter to play...")
     while True:
         clear_screen()
         play_game()

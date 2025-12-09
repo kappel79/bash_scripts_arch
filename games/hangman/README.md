@@ -2,6 +2,12 @@
 
 A simple command-line interface Hangman game written in Python.
 
+## Features
+
+*   **Themed Word List:** The game now uses a themed word list related to Linux, Windows, hardware, and software.
+*   **Questions as Hints:** Each word is accompanied by a question that serves as a hint for the player.
+*   **Customizable Words:** The words and questions are stored in a separate `words.py` file, which can be easily customized.
+
 ## Requirements
 
 * Python 3
