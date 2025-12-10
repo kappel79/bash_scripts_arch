@@ -32,7 +32,7 @@ set -euo pipefail
 SRC_DEVICE="/dev/disk/by-uuid/EB10-D4D9"
 DEST_DIR="/mnt/nvme_data/backup_live/linux_nvme"
 DATE_STR="$(date +%d%m%Y)"
-DEST_FILE="${DEST_DIR}/wd_black_${DATE_STR}.img.zst"
+DEST_FILE="${DEST_DIR}/wd_black_boot_${DATE_STR}.img.zst"
 BS_SIZE="64M"
 ZSTD_LEVEL="-10"
 
