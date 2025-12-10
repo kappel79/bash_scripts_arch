@@ -13,6 +13,11 @@ Clone the repository:
 git clone https://github.com/kappel79/bash_scripts_arch.git
 
 
+Happy XMAS 2025 and Happy New Year 2026!
+<img width="1344" height="756" alt="Whisk_315ef50d147cf8d81d043c41777f7aeeeg" src="https://github.com/user-attachments/assets/cfe46a35-c6e5-4c4c-95e4-5c4989819d7f" />
+
+
+
 Browse the scripts and read their documentation.
 Run, modify, or integrate them into your workflow.
 Contributing
