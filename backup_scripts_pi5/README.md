@@ -8,12 +8,12 @@ This collection contains Bash scripts designed to perform full partition backups
 ## Scripts Overview
 
 ### `backup_dd_root.sh`
-*   **Target:** Root partition (`nvme0n1p2`)
+*   **Target:** Root partition (`/dev/disk/by-uuid/37d2cb52-513e-40e1-b90f-213aa6096cba`)
 *   **Source Path:** Defined as `37d2cb52-513e-40e1-b90f-213aa6096cba` in the script.
 *   **Output:** Saves to `/mnt/sda/backups_pi5` with filename `pi5_root_<DATE>.img.zst`.
 
 ### `backup_dd.sh`
-*   **Target:** Boot/EFI partition (`/dev/nvme0n1p1`)
+*   **Target:** Boot/EFI partition (`/dev/disk/by-uuid/27E7-00CE`)
 *   **Source Path:** Defined as `27E7-00CE`.
 *   **Output:** Saves to `/mnt/sda/backups_pi5` with filename `pi5_boot_<DATE>.img.zst`.
 
