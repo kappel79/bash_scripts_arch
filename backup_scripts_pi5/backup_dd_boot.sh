@@ -23,7 +23,7 @@ SRC_DEVICE="/dev/disk/by-uuid/27E7-00CE"
 DEST_DIR="/mnt/sda/backups_pi5"
 DATE_STR="$(date +%d%m%Y)"
 DEST_FILE="${DEST_DIR}/pi5_boot_${DATE_STR}.img.zst"
-BS_SIZE="64M"
+BS_SIZE="16M"
 ZSTD_LEVEL="-10"
 
 if [[ $EUID -ne 0 ]]; then
