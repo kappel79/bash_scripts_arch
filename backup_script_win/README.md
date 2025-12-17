@@ -1,5 +1,7 @@
 # Windows 11 Backup Script
 
+<img width="1105" height="582" alt="win11_dd_script" src="https://github.com/kappel79/bash_scripts_arch/blob/main/backup_script_win/win_backup2.png" />
+
 This script creates a full disk backup of a Windows 11 installation using `dd` and compresses it with `zstd`.
 
 ## Disclaimer
